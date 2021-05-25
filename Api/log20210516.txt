@@ -1,0 +1,138 @@
+2021-05-16 21:17:37.421 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: d684bcaa-4a3a-4b5c-9a14-c2b5cc7aa925 Request: {} { ActionId: "69130339-2489-42a7-a936-10837f687524", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000013-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:18:03.878 +03:00 [WRN] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] Long Running Request TrackId: d684bcaa-4a3a-4b5c-9a14-c2b5cc7aa925 and ElapsedMilliseconds: 20774 { ActionId: "69130339-2489-42a7-a936-10837f687524", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000013-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:18:04.741 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: d684bcaa-4a3a-4b5c-9a14-c2b5cc7aa925 Response: {"Data":[{"Id":1,"Title":"İlkListem","Colour":"#FFC300","Items":[{"Id":1,"ListId":1,"Title":"Kahvaltı Yapılacak","Done":false,"Priority":0,"Note":null}]},{"Id":2,"Title":"İkinciListem","Colour":"#FFC300","Items":[]}],"Succeeded":true,"Errors":[]} { ActionId: "69130339-2489-42a7-a936-10837f687524", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000013-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:32:00.629 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: 593a7c3e-4f9d-445d-90ed-3f95b9b6fd12 Request: {} { ActionId: "f846dc38-b05f-4db1-9ca9-9e6ac62e9f15", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000006-0000-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:34:16.750 +03:00 [WRN] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] Long Running Request TrackId: 593a7c3e-4f9d-445d-90ed-3f95b9b6fd12 and ElapsedMilliseconds: 132162 { ActionId: "f846dc38-b05f-4db1-9ca9-9e6ac62e9f15", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000006-0000-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:34:17.523 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: 593a7c3e-4f9d-445d-90ed-3f95b9b6fd12 Response: {"Data":[{"Id":1,"Title":"İlkListem","Colour":"#FFC300","Items":[{"Id":1,"ListId":1,"Title":"Kahvaltı Yapılacak","Done":false,"Priority":0,"Note":null}]},{"Id":2,"Title":"İkinciListem","Colour":"#FFC300","Items":[]}],"Succeeded":true,"Errors":[]} { ActionId: "f846dc38-b05f-4db1-9ca9-9e6ac62e9f15", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000006-0000-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:37:50.139 +03:00 [INF] [Application.TodoLists.Commands.UpdateTodoList.UpdateTodoListCommand] TrackId: 8f056b0b-1d90-42ec-97ea-1bf86f6341cd Request: {"Id":2,"Title":"İlkListem"} { ActionId: "6b3ce734-940f-422a-bdea-9da8701cbbc2", ActionName: "Api.Controllers.TodoListsController.Update (Api)", RequestId: "8000000d-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:38:08.437 +03:00 [ERR] [Application.TodoLists.Commands.UpdateTodoList.UpdateTodoListCommand] (TrackId: 8f056b0b-1d90-42ec-97ea-1bf86f6341cd) Request throw an unhandled exception { ActionId: "6b3ce734-940f-422a-bdea-9da8701cbbc2", ActionName: "Api.Controllers.TodoListsController.Update (Api)", RequestId: "8000000d-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:38:11.825 +03:00 [INF] [Application.TodoLists.Commands.UpdateTodoList.UpdateTodoListCommand] TrackId: 8f056b0b-1d90-42ec-97ea-1bf86f6341cd Response: {"Succeeded":false,"Errors":["One or more validation failures have occured."]} { ActionId: "6b3ce734-940f-422a-bdea-9da8701cbbc2", ActionName: "Api.Controllers.TodoListsController.Update (Api)", RequestId: "8000000d-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+2021-05-16 21:45:25.089 +03:00 [INF] [Application.TodoLists.Commands.UpdateTodoList.UpdateTodoListCommand] TrackId: e0cf1f7a-57d8-4147-b5d2-a3747a974bfc Request: {"Id":2,"Title":"İlkListem"} { ActionId: "da3b198b-e875-4d70-9c1f-1284335500a7", ActionName: "Api.Controllers.TodoListsController.Update (Api)", RequestId: "8000000f-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 21:45:32.151 +03:00 [ERR] [Application.TodoLists.Commands.UpdateTodoList.UpdateTodoListCommand] (TrackId: e0cf1f7a-57d8-4147-b5d2-a3747a974bfc) Request throw an unhandled exception { ActionId: "da3b198b-e875-4d70-9c1f-1284335500a7", ActionName: "Api.Controllers.TodoListsController.Update (Api)", RequestId: "8000000f-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 28
+
+
+2021-05-16 21:45:33.062 +03:00 [INF] [Application.TodoLists.Commands.UpdateTodoList.UpdateTodoListCommand] TrackId: e0cf1f7a-57d8-4147-b5d2-a3747a974bfc Response: {"Succeeded":false,"Errors":["One or more validation failures have occured."]} { ActionId: "da3b198b-e875-4d70-9c1f-1284335500a7", ActionName: "Api.Controllers.TodoListsController.Update (Api)", RequestId: "8000000f-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 21:47:15.887 +03:00 [INF] [Application.TodoLists.Commands.DeleteTodoList.DeleteTodoListCommand] TrackId: 3012ed8d-646a-4791-b31c-f0a264c815a1 Request: {"Id":2} { ActionId: "6f196e5a-0724-40d9-b01b-eba8f79df376", ActionName: "Api.Controllers.TodoListsController.Delete (Api)", RequestId: "80000011-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 21:47:38.465 +03:00 [WRN] [Application.TodoLists.Commands.DeleteTodoList.DeleteTodoListCommand] Long Running Request TrackId: 3012ed8d-646a-4791-b31c-f0a264c815a1 and ElapsedMilliseconds: 19111 { ActionId: "6f196e5a-0724-40d9-b01b-eba8f79df376", ActionName: "Api.Controllers.TodoListsController.Delete (Api)", RequestId: "80000011-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 21:47:39.461 +03:00 [INF] [Application.TodoLists.Commands.DeleteTodoList.DeleteTodoListCommand] TrackId: 3012ed8d-646a-4791-b31c-f0a264c815a1 Response: {"Succeeded":true,"Errors":[]} { ActionId: "6f196e5a-0724-40d9-b01b-eba8f79df376", ActionName: "Api.Controllers.TodoListsController.Delete (Api)", RequestId: "80000011-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 21:56:47.227 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 124d6344-463c-461e-b72b-dcd922921674 Request: {"ListId":1,"Title":"Kahve İçilecek"} { ActionId: "43a23b3b-0c85-4319-9830-e2964191a56f", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000000f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 21:58:02.967 +03:00 [INF] [Infrastructure.Services.DomainEventService] Publishing domain event. Event - TodoItemCreatedEvent { ActionId: "43a23b3b-0c85-4319-9830-e2964191a56f", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000000f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 21:58:09.462 +03:00 [INF] [Application.TodoItems.EventHandlers.TodoItemCompletedEventHandler] CleanArchitecture Domain Event: TodoItemCreatedEvent { ActionId: "43a23b3b-0c85-4319-9830-e2964191a56f", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000000f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 21:58:11.641 +03:00 [WRN] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] Long Running Request TrackId: 124d6344-463c-461e-b72b-dcd922921674 and ElapsedMilliseconds: 78820 { ActionId: "43a23b3b-0c85-4319-9830-e2964191a56f", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000000f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 21:58:12.302 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 124d6344-463c-461e-b72b-dcd922921674 Response: {"Data":2,"Succeeded":true,"Errors":[]} { ActionId: "43a23b3b-0c85-4319-9830-e2964191a56f", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000000f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:04:12.629 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 9e052f60-3e20-4a19-852f-d2cdb7c3d318 Request: {"ListId":1,"Title":"İş başı yapılacak"} { ActionId: "6dd3e198-5bf5-4b9e-affe-90ed9f80aacc", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001a-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:04:46.216 +03:00 [INF] [Infrastructure.Services.DomainEventService] TrackId:["9e052f60-3e20-4a19-852f-d2cdb7c3d318"] Publishing domain event. Event - TodoItemCreatedEvent { ActionId: "6dd3e198-5bf5-4b9e-affe-90ed9f80aacc", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001a-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:04:50.989 +03:00 [INF] [Application.TodoItems.EventHandlers.TodoItemCompletedEventHandler] TrackId: 9e052f60-3e20-4a19-852f-d2cdb7c3d318 Domain Event: TodoItemCreatedEvent { ActionId: "6dd3e198-5bf5-4b9e-affe-90ed9f80aacc", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001a-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:04:51.990 +03:00 [WRN] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] Long Running Request TrackId: 9e052f60-3e20-4a19-852f-d2cdb7c3d318 and ElapsedMilliseconds: 20312 { ActionId: "6dd3e198-5bf5-4b9e-affe-90ed9f80aacc", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001a-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:04:52.901 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 9e052f60-3e20-4a19-852f-d2cdb7c3d318 Response: {"Data":3,"Succeeded":true,"Errors":[]} { ActionId: "6dd3e198-5bf5-4b9e-affe-90ed9f80aacc", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001a-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:08:11.685 +03:00 [INF] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] TrackId: 60d11bd5-bae2-43f1-a134-33d7fa11a521 Request: {"ListId":1,"PageNumber":1,"PageSize":10} { ActionId: "878b486e-1ecd-4af8-8621-28a44a34a855", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000013-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:10:09.587 +03:00 [WRN] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] Long Running Request TrackId: 60d11bd5-bae2-43f1-a134-33d7fa11a521 and ElapsedMilliseconds: 110513 { ActionId: "878b486e-1ecd-4af8-8621-28a44a34a855", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000013-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:10:10.278 +03:00 [INF] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] TrackId: 60d11bd5-bae2-43f1-a134-33d7fa11a521 Response: {"Items":[{"Id":1,"ListId":1,"Title":"Kahvaltı Yapılacak","Done":false,"Priority":0,"Note":null},{"Id":2,"ListId":1,"Title":"Kahve İçilecek","Done":false,"Priority":0,"Note":null},{"Id":3,"ListId":1,"Title":"İş başı yapılacak","Done":false,"Priority":0,"Note":null}],"PageIndex":1,"TotalPages":1,"TotalCount":3,"HasPreviousPage":false,"HasNextPage":false,"Succeeded":true,"Errors":[]} { ActionId: "878b486e-1ecd-4af8-8621-28a44a34a855", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000013-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:18:22.226 +03:00 [INF] [Application.TodoLists.Commands.CreateTodoList.CreateTodoListCommand] TrackId: 1ec8dffa-e317-4bd5-8963-356b16c89048 Request: {"Title":"İkinci Listem"} { ActionId: "0a4d3432-690a-4196-af92-b39b7e1e3417", ActionName: "Api.Controllers.TodoListsController.Create (Api)", RequestId: "8000001a-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:18:29.607 +03:00 [WRN] [Application.TodoLists.Commands.CreateTodoList.CreateTodoListCommand] Long Running Request TrackId: 1ec8dffa-e317-4bd5-8963-356b16c89048 and ElapsedMilliseconds: 3991 { ActionId: "0a4d3432-690a-4196-af92-b39b7e1e3417", ActionName: "Api.Controllers.TodoListsController.Create (Api)", RequestId: "8000001a-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:18:30.213 +03:00 [INF] [Application.TodoLists.Commands.CreateTodoList.CreateTodoListCommand] TrackId: 1ec8dffa-e317-4bd5-8963-356b16c89048 Response: {"Data":1,"Succeeded":true,"Errors":[]} { ActionId: "0a4d3432-690a-4196-af92-b39b7e1e3417", ActionName: "Api.Controllers.TodoListsController.Create (Api)", RequestId: "8000001a-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:18:41.264 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: 9b08c25e-1c96-46a6-ac42-02d316e3ea6b Request: {} { ActionId: "f371a224-7ae8-49ca-9a9a-628814718dd7", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000002-0003-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:18:45.255 +03:00 [WRN] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] Long Running Request TrackId: 9b08c25e-1c96-46a6-ac42-02d316e3ea6b and ElapsedMilliseconds: 2307 { ActionId: "f371a224-7ae8-49ca-9a9a-628814718dd7", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000002-0003-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:18:45.929 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: 9b08c25e-1c96-46a6-ac42-02d316e3ea6b Response: {"Data":[{"Id":1,"Title":"İkinci Listem","Colour":"#FFC300","Items":[]}],"Succeeded":true,"Errors":[]} { ActionId: "f371a224-7ae8-49ca-9a9a-628814718dd7", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "80000002-0003-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:19:19.693 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 328623ed-331f-4ed9-b906-090414cbba36 Request: {"ListId":1,"Title":"Tuvalet İhtiyacı Giderilecek"} { ActionId: "e5e7154d-dfd9-46ef-87d9-1e21f614f328", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001c-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:19:25.726 +03:00 [INF] [Infrastructure.Services.DomainEventService] TrackId:["328623ed-331f-4ed9-b906-090414cbba36"] Publishing domain event. Event - TodoItemCreatedEvent { ActionId: "e5e7154d-dfd9-46ef-87d9-1e21f614f328", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001c-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:19:26.411 +03:00 [INF] [Application.TodoItems.EventHandlers.TodoItemCompletedEventHandler] TrackId: 328623ed-331f-4ed9-b906-090414cbba36 Domain Event: TodoItemCreatedEvent { ActionId: "e5e7154d-dfd9-46ef-87d9-1e21f614f328", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001c-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:19:27.025 +03:00 [WRN] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] Long Running Request TrackId: 328623ed-331f-4ed9-b906-090414cbba36 and ElapsedMilliseconds: 4998 { ActionId: "e5e7154d-dfd9-46ef-87d9-1e21f614f328", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001c-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:19:27.718 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 328623ed-331f-4ed9-b906-090414cbba36 Response: {"Data":1,"Succeeded":true,"Errors":[]} { ActionId: "e5e7154d-dfd9-46ef-87d9-1e21f614f328", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000001c-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:19:45.875 +03:00 [INF] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] TrackId: f0033336-614e-419f-89da-2c162088a807 Request: {"ListId":1,"PageNumber":1,"PageSize":10} { ActionId: "1f8fbb81-79b8-43f2-b7c2-f1d90dbbac99", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000017-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:19:50.082 +03:00 [WRN] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] Long Running Request TrackId: f0033336-614e-419f-89da-2c162088a807 and ElapsedMilliseconds: 2016 { ActionId: "1f8fbb81-79b8-43f2-b7c2-f1d90dbbac99", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000017-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:19:50.664 +03:00 [INF] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] TrackId: f0033336-614e-419f-89da-2c162088a807 Response: {"Items":[{"Id":1,"ListId":1,"Title":"Tuvalet İhtiyacı Giderilecek","Done":false,"Priority":0,"Note":null}],"PageIndex":1,"TotalPages":1,"TotalCount":1,"HasPreviousPage":false,"HasNextPage":false,"Succeeded":true,"Errors":[]} { ActionId: "1f8fbb81-79b8-43f2-b7c2-f1d90dbbac99", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000017-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:20:15.298 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: cb81f7b7-6da0-4d54-bb6d-694073e2d12e Request: {} { ActionId: "93db0e6d-933d-41bf-b972-ad38ca7c1ba1", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "8000000f-0003-ff00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:20:20.727 +03:00 [WRN] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] Long Running Request TrackId: cb81f7b7-6da0-4d54-bb6d-694073e2d12e and ElapsedMilliseconds: 3389 { ActionId: "93db0e6d-933d-41bf-b972-ad38ca7c1ba1", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "8000000f-0003-ff00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:20:21.404 +03:00 [INF] [Application.TodoLists.Queries.GetTodos.GetTodosQuery] TrackId: cb81f7b7-6da0-4d54-bb6d-694073e2d12e Response: {"Data":[],"Succeeded":true,"Errors":[]} { ActionId: "93db0e6d-933d-41bf-b972-ad38ca7c1ba1", ActionName: "Api.Controllers.TodoListsController.Get (Api)", RequestId: "8000000f-0003-ff00-b63f-84710c7967bb", RequestPath: "/api/TodoLists" }
+
+
+2021-05-16 22:20:35.425 +03:00 [INF] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] TrackId: 8593ab00-25ff-4087-8e00-dfa9cceaee5d Request: {"ListId":1,"PageNumber":1,"PageSize":10} { ActionId: "02adc54e-fb69-493e-a0b4-f35b405a77e6", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000006-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:20:39.380 +03:00 [WRN] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] Long Running Request TrackId: 8593ab00-25ff-4087-8e00-dfa9cceaee5d and ElapsedMilliseconds: 1769 { ActionId: "02adc54e-fb69-493e-a0b4-f35b405a77e6", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000006-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-16 22:20:39.960 +03:00 [INF] [Application.TodoItems.Queries.GetTodoItemsWithPagination.GetTodoItemsWithPaginationQuery] TrackId: 8593ab00-25ff-4087-8e00-dfa9cceaee5d Response: {"Items":[],"PageIndex":1,"TotalPages":0,"TotalCount":0,"HasPreviousPage":false,"HasNextPage":false,"Succeeded":true,"Errors":[]} { ActionId: "02adc54e-fb69-493e-a0b4-f35b405a77e6", ActionName: "Api.Controllers.TodoItemsController.Get (Api)", RequestId: "80000006-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+

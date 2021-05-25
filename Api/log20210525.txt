@@ -1,0 +1,516 @@
+2021-05-25 16:04:18.380 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: df5efe9e-6e81-4060-b026-ad2f284dc7ce Request: {"ListId":1,"Title":"test1"} { ActionId: "dc126a65-5796-41ba-988b-12eaa09c897e", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000038-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 16:04:38.895 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: df5efe9e-6e81-4060-b026-ad2f284dc7ce) Request throw an unhandled exception { ActionId: "dc126a65-5796-41ba-988b-12eaa09c897e", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000038-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+System.Exception: blabla
+   at Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommandHandler.Handle(CreateTodoItemCommand request, CancellationToken cancellationToken) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\TodoItems\Commands\CreateTodoItem\CreateTodoItemCommand.cs:line 35
+   at Application.Common.Behaviours.PerformanceBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\PerformanceBehaviour.cs:line 29
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 36
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 28
+
+
+2021-05-25 16:04:44.579 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, RequestId: "80000038-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+System.InvalidCastException: Unable to cast object of type 'Application.Common.Models.Result' to type 'Application.Common.Models.Result`1[System.Int32]'.
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 33
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+
+2021-05-25 16:06:33.518 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 5d6434af-64f4-4fcf-a837-790c4a92e81b Request: {"ListId":1,"Title":"test1"} { ActionId: "dc126a65-5796-41ba-988b-12eaa09c897e", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000018-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 16:06:36.708 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 5d6434af-64f4-4fcf-a837-790c4a92e81b) Request throw an unhandled exception { ActionId: "dc126a65-5796-41ba-988b-12eaa09c897e", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000018-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+System.Exception: blabla
+   at Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommandHandler.Handle(CreateTodoItemCommand request, CancellationToken cancellationToken) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\TodoItems\Commands\CreateTodoItem\CreateTodoItemCommand.cs:line 35
+   at Application.Common.Behaviours.PerformanceBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\PerformanceBehaviour.cs:line 29
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 36
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 28
+
+
+2021-05-25 16:06:36.827 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, RequestId: "80000018-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+System.InvalidCastException: Unable to cast object of type 'Application.Common.Models.Result' to type 'Application.Common.Models.Result`1[System.Int32]'.
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 33
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+
+2021-05-25 16:57:46.330 +03:00 [INF] [Infrastructure.Services.DomainEventService] TrackId:[] Publishing domain event. Event - TodoItemCreatedEvent { ActionId: "4e0865b4-bb99-498a-b11a-3b19b5ff5547", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000002b-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 16:57:46.405 +03:00 [INF] [Application.TodoItems.EventHandlers.TodoItemCreatedEventHandler] TrackId:  Domain Event: TodoItemCreatedEvent { ActionId: "4e0865b4-bb99-498a-b11a-3b19b5ff5547", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000002b-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 16:57:46.580 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: ) Request throw an unhandled exception { ActionId: "4e0865b4-bb99-498a-b11a-3b19b5ff5547", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000002b-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+System.InvalidCastException: Unable to cast object of type 'Application.Common.Models.BaseResult' to type 'Response'.
+   at Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommandHandler.Handle(CreateTodoItemCommand request, CancellationToken cancellationToken) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\TodoItems\Commands\CreateTodoItem\CreateTodoItemCommand.cs:line 80
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 54
+
+
+2021-05-25 17:01:31.488 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: ) Request throw an unhandled exception { ActionId: "4e0865b4-bb99-498a-b11a-3b19b5ff5547", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000004d-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+System.Exception: blabla
+   at Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommandHandler.Handle(CreateTodoItemCommand request, CancellationToken cancellationToken)
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+
+
+2021-05-25 17:15:56.466 +03:00 [INF] [Infrastructure.Services.DomainEventService] TrackId:[] Publishing domain event. Event - TodoItemCreatedEvent { ActionId: "da988c3a-fe3d-431e-8a8c-e59b1913e954", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000013-0003-fe00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 17:15:56.558 +03:00 [INF] [Application.TodoItems.EventHandlers.TodoItemCreatedEventHandler] TrackId:  Domain Event: TodoItemCreatedEvent { ActionId: "da988c3a-fe3d-431e-8a8c-e59b1913e954", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000013-0003-fe00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 19:34:36.611 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 0410119e-3b70-4e92-9bac-edd8ff2afa5a Request: {"ListId":1,"Title":""} { ActionId: "b69e2c94-54a0-4dc6-abbf-947133a63cb6", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000050-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 19:34:52.009 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 0410119e-3b70-4e92-9bac-edd8ff2afa5a) Request throw an unhandled exception { ActionId: "b69e2c94-54a0-4dc6-abbf-947133a63cb6", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000050-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 19:34:52.332 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, RequestId: "80000050-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+
+2021-05-25 19:48:45.549 +03:00 [ERR] [Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer] Connection ID "17942340925644603473", Request ID "80000052-0002-f900-b63f-84710c7967bb": An unhandled exception was thrown by the application. { EventId: { Id: 2, Name: "ApplicationError" }, RequestId: "80000052-0002-f900-b63f-84710c7967bb", RequestPath: "/swagger/v1/swagger.json" }
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Api.Controllers.ErrorController.Error (Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+
+
+2021-05-25 19:49:36.950 +03:00 [ERR] [Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer] Connection ID "17870283323016740923", Request ID "8000003c-0000-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application. { EventId: { Id: 2, Name: "ApplicationError" }, RequestId: "8000003c-0000-f800-b63f-84710c7967bb", RequestPath: "/swagger/v1/swagger.json" }
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Api.Controllers.ErrorController.Error (Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+
+
+2021-05-25 19:49:45.830 +03:00 [ERR] [Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer] Connection ID "17870283323016740925", Request ID "8000003e-0000-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application. { EventId: { Id: 2, Name: "ApplicationError" }, RequestId: "8000003e-0000-f800-b63f-84710c7967bb", RequestPath: "/swagger/v1/swagger.json" }
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Api.Controllers.ErrorController.Error (Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+
+
+2021-05-25 19:49:49.055 +03:00 [ERR] [Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer] Connection ID "17870283323016740927", Request ID "80000040-0000-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application. { EventId: { Id: 2, Name: "ApplicationError" }, RequestId: "80000040-0000-f800-b63f-84710c7967bb", RequestPath: "/swagger/v1/swagger.json" }
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Api.Controllers.ErrorController.Error (Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+
+
+2021-05-25 19:49:49.710 +03:00 [ERR] [Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer] Connection ID "17870283323016740929", Request ID "80000042-0000-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application. { EventId: { Id: 2, Name: "ApplicationError" }, RequestId: "80000042-0000-f800-b63f-84710c7967bb", RequestPath: "/swagger/v1/swagger.json" }
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Api.Controllers.ErrorController.Error (Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+
+
+2021-05-25 19:51:27.318 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: f935d29e-890f-4484-b54c-9dd9093f73cb Request: {"ListId":0,"Title":""} { ActionId: "79106b58-c4d8-46ab-b9af-dee0be3264dd", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000046-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 19:51:28.014 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: f935d29e-890f-4484-b54c-9dd9093f73cb) Request throw an unhandled exception { ActionId: "79106b58-c4d8-46ab-b9af-dee0be3264dd", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000046-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 19:51:28.326 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "79106b58-c4d8-46ab-b9af-dee0be3264dd", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000046-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:01:58.255 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 25d5855f-7e82-4a16-ab53-11ae9fcaa215 Request: {"ListId":0,"Title":""} { ActionId: "529953ed-0f20-46eb-9c39-affd98f7948e", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000060-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:01:58.920 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 25d5855f-7e82-4a16-ab53-11ae9fcaa215) Request throw an unhandled exception { ActionId: "529953ed-0f20-46eb-9c39-affd98f7948e", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000060-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:01:59.187 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "529953ed-0f20-46eb-9c39-affd98f7948e", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000060-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:06:02.026 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "0fbe7f49-705a-4dfd-a114-e600431b132e", ActionName: "Api.Controllers.ErrorController.HandleError (Api)", RequestId: "8000002d-0000-fb00-b63f-84710c7967bb", RequestPath: "/api/Error/HandleError" }
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Api.Controllers.ErrorController.HandleError() in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\ErrorController.cs:line 23
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:07:15.869 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 249a6085-54c1-4347-aad0-85e7144ba2cd Request: {"ListId":0,"Title":""} { ActionId: "de5fc331-1fa7-4fd8-adec-1e8fbdd6f856", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000005d-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:07:16.148 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 249a6085-54c1-4347-aad0-85e7144ba2cd) Request throw an unhandled exception { ActionId: "de5fc331-1fa7-4fd8-adec-1e8fbdd6f856", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000005d-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:07:16.406 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "de5fc331-1fa7-4fd8-adec-1e8fbdd6f856", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000005d-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:12:05.868 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 6366da84-af49-46a6-a99b-928f62758554 Request: {"ListId":0,"Title":""} { ActionId: "ff5d9964-bbba-4b1a-8b1c-4f9219fb4c7c", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000064-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:12:06.440 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 6366da84-af49-46a6-a99b-928f62758554) Request throw an unhandled exception { ActionId: "ff5d9964-bbba-4b1a-8b1c-4f9219fb4c7c", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000064-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:12:06.785 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "ff5d9964-bbba-4b1a-8b1c-4f9219fb4c7c", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000064-0001-fd00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:15:29.068 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: a26d2fba-fff1-40d7-a4dd-915e6f5bcb82 Request: {"ListId":0,"Title":""} { ActionId: "a220ff47-073b-4c42-ab1e-1ccf7cd94138", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000005f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:15:40.372 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: a26d2fba-fff1-40d7-a4dd-915e6f5bcb82) Request throw an unhandled exception { ActionId: "a220ff47-073b-4c42-ab1e-1ccf7cd94138", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000005f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:15:43.819 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "a220ff47-073b-4c42-ab1e-1ccf7cd94138", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000005f-0002-f900-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:33:39.264 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: b5694b76-541c-4ecf-9d03-aa18e8765470 Request: {"ListId":0,"Title":""} { ActionId: "332d9951-5f80-44b3-a951-2ac2d73156c7", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000004e-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:33:42.286 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: b5694b76-541c-4ecf-9d03-aa18e8765470) Request throw an unhandled exception { ActionId: "332d9951-5f80-44b3-a951-2ac2d73156c7", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000004e-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:33:42.563 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "332d9951-5f80-44b3-a951-2ac2d73156c7", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000004e-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:35:14.010 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 46cc8852-754f-467b-8175-96d5b03c5e37 Request: {"ListId":0,"Title":""} { ActionId: "332d9951-5f80-44b3-a951-2ac2d73156c7", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000050-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:35:15.420 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 46cc8852-754f-467b-8175-96d5b03c5e37) Request throw an unhandled exception { ActionId: "332d9951-5f80-44b3-a951-2ac2d73156c7", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000050-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:35:15.597 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "332d9951-5f80-44b3-a951-2ac2d73156c7", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000050-0000-f800-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:38:15.795 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 1c21a9f2-33d4-4428-8a74-43cf1654d69e Request: {"ListId":0,"Title":""} { ActionId: "8a802f89-4d7f-49ed-833e-45e3f9eafe23", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000027-0001-fc00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:38:18.419 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 1c21a9f2-33d4-4428-8a74-43cf1654d69e) Request throw an unhandled exception { ActionId: "8a802f89-4d7f-49ed-833e-45e3f9eafe23", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000027-0001-fc00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:38:18.650 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "8a802f89-4d7f-49ed-833e-45e3f9eafe23", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "80000027-0001-fc00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2021-05-25 20:40:32.133 +03:00 [INF] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] TrackId: 8c0794d9-a9e5-4c55-94cc-a7900249a27c Request: {"ListId":0,"Title":""} { ActionId: "df067142-4421-4465-b818-f69cc7706988", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000002b-0001-fc00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+
+
+2021-05-25 20:40:35.411 +03:00 [ERR] [Application.TodoItems.Commands.CreateTodoItem.CreateTodoItemCommand] (TrackId: 8c0794d9-a9e5-4c55-94cc-a7900249a27c) Request throw an unhandled exception { ActionId: "df067142-4421-4465-b818-f69cc7706988", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000002b-0001-fc00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-05-25 20:40:35.652 +03:00 [ERR] [Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware] An unhandled exception has occurred while executing the request. { EventId: { Id: 1, Name: "UnhandledException" }, ActionId: "df067142-4421-4465-b818-f69cc7706988", ActionName: "Api.Controllers.TodoItemsController.Create (Api)", RequestId: "8000002b-0001-fc00-b63f-84710c7967bb", RequestPath: "/api/TodoItems" }
+Application.Common.Exceptions.ValidationException: One or more validation failures have occured.
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\ValidationBehaviour.cs:line 32
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+   at Application.Common.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Application\Common\Behaviours\LoggingBehaviour.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Api.Controllers.TodoItemsController.Create(CreateTodoItemCommand command) in C:\Users\aercin\Desktop\Mimari Denemeler\MyCleanArchitectureSample\Api\Controllers\TodoItemsController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
